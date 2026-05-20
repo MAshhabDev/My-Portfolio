@@ -1,10 +1,22 @@
 
+
+import Navbar from "./Components/Navbar/Navbar"
+
+import Hero from "./Components/Hero/Hero"
+
 function App() {
 
   return (
-    <>
-    <button className='btn btn-primary'>Log In</button>
-    </>
+    <div className=" max-w-10/12 mx-auto">
+      <Navbar></Navbar>
+
+      <main>
+        <Hero></Hero>
+      </main>
+
+    </div>
+
+
   )
 }
 
