@@ -1,54 +1,65 @@
 import React from 'react';
+
 import image from "../../assets/Name.svg"
+import image1 from "../../assets/Name1.png"
 
 const Navbar = () => {
-    const links = (
+    // Menu options array - Pure regular HTML tags with section anchors
+    const navOptions = (
         <>
-            <li><a className="text-[#22d3ee]" href="#home">Home</a></li>
-            <li><a className="text-[#22d3ee]" href="#about">About</a></li>
-            <li><a className="text-[#22d3ee]" href="#skills">Skills</a></li>
-            <li><a className="text-[#22d3ee]" href="#projects">Projects</a></li>
-            <li><a className="text-[#22d3ee]" href="#contact">Contact</a></li>
+            <li><a href="/#home" className="hover:text-secondary font-medium transition-colors">Home</a></li>
+
+            {/* 2. Projects Section Link */}
+            <li><a href="/#projects" className="hover:text-secondary font-medium transition-colors">Projects</a></li>
+
+            <li><a href="/#skills" className="hover:text-secondary font-medium transition-colors">Skills</a></li>
+
+            <li><a href="/blogs" className="hover:text-secondary font-medium transition-colors">Blogs</a></li>
+
+            <li><a href="/#contact" className="hover:text-secondary font-medium transition-colors">Contact</a></li>
         </>
     );
 
     return (
-        <div className="sticky top-0 z-50 bg-[#0f172a]/40 backdrop-blur-md w-11/12 mx-auto my-3">
-            <div className="navbar bg-base-100 shadow-sm">
-                <div className="navbar-start">
-                    <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-                        </div>
-                        <ul
-                            tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            {links}
-                        </ul>
-                    </div>
+        <div className="navbar sticky bg-base-100 border-b border-base-300 top-0 left-0  z-50 w-11/12 mx-auto  backdrop-blur-md  shadow-sm px-4 md:px-12">
 
-                    <a
-                        href="#home"
-                        // w-fit দেওয়ার কারণে বাটনটি ইমেজের সমান সাইজের থাকবে, ডানে-বামে বড় হবে না
-                        className="w-fit flex items-center justify-center p-1 rounded-xl transition-all duration-300 hover:bg-white/5 active:scale-95"
-                    >
-                        <img
-                            // ইমেজের হাইট বাড়িয়ে দিলাম যাতে লোগোটা বেশ বড় ও স্পষ্ট দেখায়
-                            className="h-14 md:h-18 w-auto object-contain"
-                            src={image}
-                            alt="Logo"
-                        />
-                    </a>
-                </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        {links}
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-base-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </div>
+                    <ul
+                        tabIndex={0}
+                        className="menu menu-sm dropdown-content bg-base-200 text-base-content rounded-xl z-20 mt-3 w-52 p-3 shadow-2xl border border-base-300 gap-2">
+                        {navOptions}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn">Button</a>
-                </div>
+
+                <a href="/" className="flex items-center justify-center min-w-[50px] max-w-[20px] md:max-w-[80px] transition-transform hover:scale-105">
+                    <img
+                        src={image}
+                        alt="Mahir Logo"
+                        className="w-full h-auto object-contain block scale-125 origin-left"
+                    />
+                </a>
             </div>
+
+            {/* Desktop Menu View */}
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal px-1 gap-6 text-base-content">
+                    {navOptions}
+                </ul>
+            </div>
+
+            {/* Navbar End CTA Target */}
+            <div className="navbar-end">
+                <a href="/#contact" className="btn btn-primary rounded-xl px-5 font-bold shadow-md shadow-primary/20 hover:scale-105 transition-transform normal-case">
+                    Resume 📥
+                </a>
+            </div>
+
         </div>
     );
 };

@@ -2,7 +2,9 @@
 
 import Navbar from "./Components/Navbar/Navbar"
 
-import Hero from "./Components/Hero/Hero"
+// import Skills from "./Components/Skills/Skills"
+import HeroSection from "./Components/Hero/Hero"
+import SkillsScroll from "./Components/Skills/skills"
 
 function App() {
 
@@ -11,7 +13,9 @@ function App() {
       <Navbar></Navbar>
 
       <main>
-        <Hero></Hero>
+        <HeroSection></HeroSection>        
+        <SkillsScroll></SkillsScroll>
+        {/* <Skills></Skills> */}
       </main>
 
     </div>

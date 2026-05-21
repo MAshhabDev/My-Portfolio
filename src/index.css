@@ -1,16 +1,141 @@
 @import "tailwindcss";
 
 @plugin "daisyui" {
+  /* Tor custom night theme ke default korlam */
   themes: night --default, light;
 }
 
 @plugin "daisyui/theme" {
   name: "night";
-  
-  --color-base-100: #030014;       
-  --color-base-200: #0d0124;   
-  
-  --color-primary: #8a2be2;        
-  --color-secondary: #00ffff;     
-  
-  --color-base-content: #e0d9f0;  }
+
+  /* Background Elements */
+  --color-base-100: #030014;
+  /* Main deep space dark background */
+  --color-base-200: #0d0124;
+  /* Terminal Box and Project Cards background */
+  --color-base-300: #19083d;
+  /* Borders and subtle dividers */
+
+  /* Brand Theme Colors */
+  --color-primary: #8a2be2;
+  /* Vibrant Neon Purple (Buttons/Glow) */
+  --color-secondary: #00ffff;
+  /* Electric Cyan (Accent Highlights) */
+  --color-accent: #ff007f;
+  /* Hot Pink (Dynamic highlights if needed) */
+
+  /* Typography */
+  --color-base-content: #e0d9f0;
+  /* Readable soft-white text */
+}
+
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: night --default, light;
+}
+
+@plugin "daisyui/theme" {
+  name: "night";
+  --color-base-100: #030014;
+  --color-base-200: #0d0124;
+  --color-primary: #8a2be2;
+  --color-secondary: #00ffff;
+  --color-base-content: #e0d9f0;
+}
+
+/* ⬇️ EXACTLY EKHANE BOSHIYE DE ⬇️ */
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spin-fast {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes cursor {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #8a2be2;
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 30s linear infinite;
+}
+
+.animate-spin-slow-reverse {
+  animation: spin-slow-reverse 20s linear infinite;
+}
+
+.animate-spin-fast {
+  animation: spin-fast 10s linear infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.delay-1s {
+  animation-delay: 1s;
+}
+
+.delay-2s {
+  animation-delay: 2s;
+}
+
+.animate-cursor {
+  animation: cursor 0.8s step-end infinite;
+}
+
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(#19083d 1px, transparent 1px),
+    linear-gradient(90deg, #19083d 1px, transparent 1px);
+  background-size: 50px 50px;
+}

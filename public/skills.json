@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "HTML5",
+        "icon": "FaHtml5",
+        "color": "text-orange-500"
+    },
+    {
+        "id": 2,
+        "name": "CSS3",
+        "icon": "FaCss3Alt",
+        "color": "text-blue-500"
+    },
+    {
+        "id": 3,
+        "name": "JavaScript",
+        "icon": "SiJavascript",
+        "color": "text-yellow-400"
+    },
+    {
+        "id": 4,
+        "name": "Tailwind CSS",
+        "icon": "SiTailwindcss",
+        "color": "text-cyan-400"
+    },
+    {
+        "id": 5,
+        "name": "React.js",
+        "icon": "FaReact",
+        "color": "text-sky-400"
+    },
+    {
+        "id": 6,
+        "name": "TypeScript",
+        "icon": "SiTypescript",
+        "color": "text-blue-600"
+    },
+    {
+        "id": 7,
+        "name": "Node.js",
+        "icon": "FaNodeJs",
+        "color": "text-green-500"
+    },
+    {
+        "id": 8,
+        "name": "Express.js",
+        "icon": "SiExpress",
+        "color": "text-gray-400"
+    },
+    {
+        "id": 9,
+        "name": "MongoDB",
+        "icon": "SiMongodb",
+        "color": "text-green-600"
+    },
+    {
+        "id": 10,
+        "name": "PostgreSQL",
+        "icon": "DiPostgresql",
+        "color": "text-blue-400"
+    }
+]
