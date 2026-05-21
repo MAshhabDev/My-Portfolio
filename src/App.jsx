@@ -7,7 +7,7 @@ import Hero from "./Components/Hero/Hero"
 function App() {
 
   return (
-    <div className=" max-w-10/12 mx-auto">
+    <div className=" w-11/12 mx-auto my-3">
       <Navbar></Navbar>
 
       <main>

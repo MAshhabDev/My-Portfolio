@@ -1,23 +1,16 @@
 @import "tailwindcss";
 
 @plugin "daisyui" {
-
   themes: night --default, light;
-
 }
-
-@theme {
-  --font-sans: 'Inter', sans-serif;
-  --font-mono: 'Fira Code', monospace;
-}
-
 
 @plugin "daisyui/theme" {
   name: "night";
-  default: true;
-
-  --color-base-100: #0f172a;
-  --color-base-200: #1e293b;
-  --color-primary: #22d3ee;
-  --color-base-content: #e2e8f0;
-}
+  
+  --color-base-100: #030014;       
+  --color-base-200: #0d0124;   
+  
+  --color-primary: #8a2be2;        
+  --color-secondary: #00ffff;     
+  
+  --color-base-content: #e0d9f0;  }
