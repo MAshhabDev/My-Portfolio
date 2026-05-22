@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-// Upgraded structure using stack arrays instead of raw comma-separated text strings
 const ProjectsJ = [
   {
     id: 1,
@@ -43,19 +42,20 @@ const ProjectsJ = [
 
 export default function Projects() {
   return (
-    <section className="py-20 w-11/12 mx-auto px-4 min-h-screen relative overflow-hidden text-slate-100">
+    <section id="projects" className="py-5 w-full relative overflow-hidden text-base-content">
       
       {/* Space Glow Accents */}
-      <div className="absolute top-[20%] left-[-10%] w-[400px] h-[400px] bg-indigo-900/15 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-[10%] right-[-10%] w-[400px] h-[400px] bg-purple-900/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-[20%] left-[-10%] w-[400px] h-[400px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-[10%] right-[-10%] w-[400px] h-[400px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10 px-4">
 
         {/* Section Heading */}
         <div className="text-center mb-16">
-         
-          <h2 className="text-4xl font-extrabold tracking-tight mt-4 text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-primary sm:text-5xl">
-            Featured Projects
+          <h2 className="text-4xl font-extrabold tracking-tight mt-4 text-white bg-gradient-to-r from-base-content to-base-content/70 bg-clip-text sm:text-5xl">
+            Featured <span className="text-primary">Projects</span>
+                            <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary mt-3 mx-auto rounded-full"></div>
+
           </h2>
         </div>
 
@@ -67,41 +67,47 @@ export default function Projects() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              whileHover={{ y: -6, borderColor: 'rgba(99, 102, 241, 0.4)' }}
-              className="flex flex-col bg-slate-900/40 backdrop-blur-md rounded-2xl overflow-hidden border border-slate-800 shadow-2xl transition-all duration-300"
+              transition={{ duration: 0.6, ease: "easeOut", delay: idx * 0.1 }}
+              whileHover={{ 
+                y: -8, 
+                borderColor: 'var(--p)',
+                transition: { duration: 0.3, ease: "easeInOut" }
+              }}
+              className="group flex flex-col bg-base-200/40 backdrop-blur-md rounded-2xl overflow-hidden border border-base-300 shadow-xl transition-all duration-500 ease-out"
             >
 
               {/* Cover Image Wrapper */}
-              <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-950 group border-b border-slate-800/60">
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-base-300 border-b border-base-300">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                  className="object-cover w-full h-full transform transition-all duration-700 ease-out group-hover:scale-105 opacity-90 group-hover:opacity-100"
                   loading="lazy"
                 />
+                {/* ইমেজের ওপর একটি হালকা ডার্ক ওভারলে যা হোভারে ক্লিয়ার হবে */}
+                <div className="absolute inset-0 bg-base-950/10 group-hover:bg-transparent transition-colors duration-500" />
               </div>
 
               {/* Information / Content Card Core */}
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold text-white tracking-tight mb-3">
+                <h3 className="text-2xl font-bold text-base-content tracking-tight mb-3 transition-colors duration-300 group-hover:text-primary">
                   {project.title}
                 </h3>
 
-                <p className="text-sm leading-relaxed text-slate-400 font-normal mb-6 flex-grow line-clamp-3">
+                <p className="text-sm leading-relaxed text-base-content/70 font-normal mb-6 flex-grow line-clamp-3">
                   {project.description}
                 </p>
 
-                {/* UPDATED LAYER: High contrast matching image button chips */}
+                {/* Tech Stack Layer */}
                 <div className="mb-6">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2.5">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-base-content/50 mb-2.5">
                     Stack:
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.stack.map((tech, techIdx) => (
                       <span 
                         key={techIdx} 
-                        className="px-3.5 py-1.5 text-xs font-medium tracking-wide rounded-xl bg-purple-950/40 text-[#ec4899] border border-purple-900/30 shadow-inner"
+                        className="px-3 py-1 text-xs font-medium tracking-wide rounded-lg bg-base-300/60 text-base-content border border-base-300 shadow-sm hover:bg-base-300 transition-colors duration-200"
                       >
                         {tech}
                       </span>
@@ -115,10 +121,10 @@ export default function Projects() {
                     href={project.liveLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn btn-sm btn-primary rounded-xl capitalize font-medium text-white px-5 shadow-lg shadow-primary/20"
+                    className="btn btn-sm btn-primary text-primary-content rounded-xl capitalize font-semibold px-5 shadow-sm hover:scale-105 transition-all duration-300"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 2 0 00-2 2v10a2 2 2 0 002 2h10a2 2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                     Live Demo
                   </a>
@@ -127,7 +133,7 @@ export default function Projects() {
                     href={project.codeLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn btn-sm btn-outline rounded-xl capitalize font-medium text-slate-300 border-slate-700 hover:bg-white hover:text-slate-950"
+                    className="btn btn-sm btn-outline border-base-300 text-base-content/80 hover:bg-base-content hover:text-base-100 rounded-xl capitalize font-medium px-5 transition-all duration-300"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />

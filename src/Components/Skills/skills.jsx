@@ -18,7 +18,7 @@ const SkillsScroll = () => {
     const duplicatedSkills = [...skills, ...skills, ...skills];
 
     return (
-        <section id="skills" className="bg-base-100 text-base-content py-10 border-t border-base-300 overflow-hidden w-full">
+        <section id="skills" className="bg-base-100 text-base-content py-5 border-base-300 overflow-hidden w-full">
             
             {/* Title Block Container: Standard center spacing dynamic match */}
             <div className="max-w-7xl mx-auto px-6 text-center mb-14">
@@ -26,7 +26,6 @@ const SkillsScroll = () => {
                 <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary mt-3 mx-auto rounded-full"></div>
             </div>
 
-            {/* 🚀 FULL WIDTH CONTINOUS MARQUEE WRAPPER (Screen Er Kanamachhi Line Segment Match) */}
             <div className="relative w-full flex overflow-hidden whitespace-nowrap">
                 
                 {/* Optional Glassmorphism edge fading overlay layers (Video er moto left-right soft fade look) */}

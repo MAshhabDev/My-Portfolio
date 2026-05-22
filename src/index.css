@@ -1,50 +1,35 @@
 @import "tailwindcss";
 
 @plugin "daisyui" {
-  /* Tor custom night theme ke default korlam */
+  /* তোমার কাস্টম স্লেট থিমকে ডিফল্ট করলাম */
   themes: night --default, light;
 }
 
 @plugin "daisyui/theme" {
   name: "night";
 
-  /* Background Elements */
-  --color-base-100: #030014;
-  /* Main deep space dark background */
-  --color-base-200: #0d0124;
-  /* Terminal Box and Project Cards background */
-  --color-base-300: #19083d;
-  /* Borders and subtle dividers */
+  /* Background Elements — তোমার নতুন রয়্যাল স্লেট কালার কম্বিনেশন */
+  --color-base-100: #0f172a;
+  /* মেইন ব্যাকগ্রাউন্ড (bg-slate-900) */
+  --color-base-200: #1e293b;
+  /* কার্ড ও বক্স ব্যাকগ্রাউন্ড (bg-slate-800) */
+  --color-base-300: rgba(255, 255, 255, 0.03);
+  /* অতি সূক্ষ্ম বর্ডার লাইন */
 
   /* Brand Theme Colors */
-  --color-primary: #8a2be2;
-  /* Vibrant Neon Purple (Buttons/Glow) */
-  --color-secondary: #00ffff;
-  /* Electric Cyan (Accent Highlights) */
-  --color-accent: #ff007f;
-  /* Hot Pink (Dynamic highlights if needed) */
+  --color-primary: #00d8ff;
+  /* রিয়্যাক্ট নিয়ন ব্লু */
+  --color-secondary: #ec4899;
+  /* নিয়ন পিঙ্ক/পার্পল */
+  --color-accent: #38bdf8;
+  /* লাইট স্কাই ব্লু ফোকাস */
 
   /* Typography */
-  --color-base-content: #e0d9f0;
-  /* Readable soft-white text */
+  --color-base-content: #f8fafc;
+  /* ঝকঝকে ক্লিন সফট-হোয়াইট টেক্সট (slate-50) */
 }
 
-@import "tailwindcss";
-
-@plugin "daisyui" {
-  themes: night --default, light;
-}
-
-@plugin "daisyui/theme" {
-  name: "night";
-  --color-base-100: #030014;
-  --color-base-200: #0d0124;
-  --color-primary: #8a2be2;
-  --color-secondary: #00ffff;
-  --color-base-content: #e0d9f0;
-}
-
-/* ⬇️ EXACTLY EKHANE BOSHIYE DE ⬇️ */
+/* ⬇️ গ্লোবাল ইউটিলিটি, অ্যানিমেশন এবং কাস্টম ক্লাসসমূহ ⬇️ */
 html {
   scroll-behavior: smooth;
 }
@@ -101,16 +86,18 @@ html {
   }
 
   50% {
-    border-color: #8a2be2;
+    border-color: #00d8ff;
   }
 }
 
+/* Tailwind v4 কাস্টম ক্লাসের সাথে সিঙ্ক */
 .animate-spin-slow {
   animation: spin-slow 30s linear infinite;
 }
 
+/* অরবিটের আইকন সোজা রাখার জন্য কাউন্টার-রোটেশন ক্লাস */
 .animate-spin-slow-reverse {
-  animation: spin-slow-reverse 20s linear infinite;
+  animation: spin-slow-reverse 40s linear infinite;
 }
 
 .animate-spin-fast {
@@ -133,9 +120,10 @@ html {
   animation: cursor 0.8s step-end infinite;
 }
 
+/* গ্রিড প্যাটার্ন কালার নতুন স্লেট থিমের সাথে ম্যাচ করা হয়েছে */
 .bg-grid-pattern {
   background-image:
-    linear-gradient(#19083d 1px, transparent 1px),
-    linear-gradient(90deg, #19083d 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 50px 50px;
 }

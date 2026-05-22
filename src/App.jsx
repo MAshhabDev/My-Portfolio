@@ -1,28 +1,31 @@
-
-
-import Navbar from "./Components/Navbar/Navbar"
-
-// import Skills from "./Components/Skills/Skills"
-import HeroSection from "./Components/Hero/Hero"
-import SkillsScroll from "./Components/Skills/skills"
-import Projects from "./Components/ProjectsSection/Projects"
+import Navbar from "./Components/Navbar/Navbar";
+import HeroSection from "./Components/Hero/Hero";
+import SkillsScroll from "./Components/Skills/skills";
+import Projects from "./Components/ProjectsSection/Projects";
+import EducationTimeline from "./Components/Education/EducationTimelinse";
+import ContactSection from "./Components/Contact/ContactInfo";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
-
   return (
-    <div className=" w-11/12 mx-auto my-3">
-      <Navbar></Navbar>
+    // Removed outer margins so the sticky header fits edge-to-edge seamlessly
+    <div className="min-h-screen w-11/12 max-w-7xl mx-auto bg-base-100 text-base-content ">
+      <Navbar />
 
-      <main>
-        <HeroSection></HeroSection>
-        <SkillsScroll></SkillsScroll>
-        <Projects></Projects>
+      {/* Main container controls the global consistent alignment */}
+      <main className="w-11/12 max-w-7xl mx-auto space-y-10 py-10">
+        <HeroSection />
+        <SkillsScroll />
+        <Projects />
+        <EducationTimeline />
+        <ContactSection />
       </main>
 
+      <footer className="w-11/12 max-w-7xl mx-auto py-6">
+        <Footer />
+      </footer>
     </div>
-
-
-  )
+  );
 }
 
-export default App
+export default App;
