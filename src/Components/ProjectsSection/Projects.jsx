@@ -4,45 +4,45 @@ import { motion } from 'framer-motion';
 const ProjectsJ = [
   {
     id: 1,
-    title: "ShelfShare",
-    description: "A platform for book lovers to trade books with each other. Users can create an account, add books to their collection, and trade books with other users.",
-    stack: ["React", "Node.js", "Express", "MongoDB", "TypeScript", "Redux", "NextAuth"],
-    liveLink: "https://example.com",
-    codeLink: "https://github.com",
-    image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=600"
+    title: "News Portal Website",
+    description: "Developed a responsive news portal featuring category-based news filtering and dynamic content display. Integrated Firebase for secure user authentication and reliable hosting, ensuring a clean UI with trending and latest news sections across all screen sizes[cite: 24, 25, 26, 29, 30, 31].",
+    stack: ["React.js", "Tailwind CSS", "Firebase", "JavaScript", "HTML", "CSS"],
+    liveLink: "#", // আপনার লাইভ ডেমো লিঙ্ক এখানে বসাবেন
+    codeLink: "https://github.com/MAshhabDev", // আপনার গিটহাব প্রজেক্ট লিঙ্ক [cite: 4]
+    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=600"
   },
   {
     id: 2,
-    title: "Career.Go",
-    description: "A platform for career seekers to find job opportunities. Users can create an account, search for jobs, and apply for jobs.",
-    stack: ["Next.js", "Express.js", "MongoDB", "JWT", "Redux", "DaisyUI"],
-    liveLink: "https://example.com",
-    codeLink: "https://github.com",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=600"
+    title: "Travel Booking Website",
+    description: "Built a responsive travel booking web application with an interactive UI for exploring destinations. Implemented a scalable component-based architecture with dynamic content rendering, with ongoing development for an advanced navigation and booking system[cite: 32, 34, 35, 36, 37, 38].",
+    stack: ["React.js", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
+    liveLink: "#", // আপনার লাইভ ডেমো লিঙ্ক এখানে বসাবেন
+    codeLink: "https://github.com/MAshhabDev", // আপনার গিটহাব প্রজেক্ট লিঙ্ক [cite: 4]
+    image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=600"
   },
   {
     id: 3,
-    title: "Learn With Shahanar",
-    description: "A learning platform for the students to master MERN stack from basic to advanced knowledge.",
-    stack: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS", "Firebase"],
-    liveLink: "https://example.com",
-    codeLink: "https://github.com",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600"
+    title: "Healthcare Expenditure Prediction",
+    description: "Developed multiple machine learning models (Logistic Regression, Random Forest, SVM, XGBoost, LGBM) utilizing the national HIES 2022-23 dataset to predict out-of-pocket healthcare expenditure risks in Bangladesh. Achieved ~73% accuracy using advanced ensemble models[cite: 39, 40, 42, 43, 44, 45].",
+    stack: ["Python", "Scikit-learn", "Pandas", "NumPy", "Machine Learning"],
+    liveLink: null, // ML প্রজেক্টের জন্য লাইভ ডেমো বাটন হাইড থাকবে
+    codeLink: "https://github.com/MAshhabDev", // আপনার গিটহাব প্রজেক্ট লিঙ্ক [cite: 4]
+    image: "https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?q=80&w=600"
   },
   {
     id: 4,
-    title: "Daily Drafts",
-    description: "Explore insightful blogs, write your own, and be a part of our ever-growing community of thinkers.",
-    stack: ["React", "MongoDB", "Express", "Node.js", "TailwindCSS", "Firebase"],
-    liveLink: "https://example.com",
-    codeLink: "https://github.com",
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=600"
+    title: "AI in Education Impact Analysis",
+    description: "Built and optimized classification models including Decision Trees, Naive Bayes, and Random Forests to evaluate the structural advantages and disadvantages of AI in the education sector. Conducted intensive data preprocessing and achieved an 81% accuracy metric[cite: 46, 47, 49, 50, 51, 52, 53].",
+    stack: ["Python", "Scikit-learn", "Pandas", "Google Colab", "Machine Learning"],
+    liveLink: null, // ML প্রজেক্টের জন্য লাইভ ডেমো বাটন হাইড থাকবে
+    codeLink: "https://github.com/MAshhabDev", // আপনার গিটহাব প্রজেক্ট লিঙ্ক [cite: 4]
+    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=600"
   }
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-5 w-full relative overflow-hidden text-base-content">
+    <section id="projects" className="py-5 w-full relative overflow-hidden text-base-content bg-transparent">
       
       {/* Space Glow Accents */}
       <div className="absolute top-[20%] left-[-10%] w-[400px] h-[400px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
@@ -54,8 +54,7 @@ export default function Projects() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold tracking-tight mt-4 text-white bg-gradient-to-r from-base-content to-base-content/70 bg-clip-text sm:text-5xl">
             Featured <span className="text-primary">Projects</span>
-                            <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary mt-3 mx-auto rounded-full"></div>
-
+            <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary mt-3 mx-auto rounded-full"></div>
           </h2>
         </div>
 
@@ -70,21 +69,19 @@ export default function Projects() {
               transition={{ duration: 0.6, ease: "easeOut", delay: idx * 0.1 }}
               whileHover={{ 
                 y: -8, 
-                borderColor: 'var(--p)',
                 transition: { duration: 0.3, ease: "easeInOut" }
               }}
-              className="group flex flex-col bg-base-200/40 backdrop-blur-md rounded-2xl overflow-hidden border border-base-300 shadow-xl transition-all duration-500 ease-out"
+              className="group flex flex-col bg-base-200/40 backdrop-blur-md rounded-2xl overflow-hidden border border-base-300 hover:border-primary/40 shadow-xl transition-all duration-500 ease-out"
             >
 
               {/* Cover Image Wrapper */}
-              <div className="relative aspect-[16/9] w-full overflow-hidden bg-base-300 border-b border-base-300">
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-base-300 border-b border-b-base-300">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="object-cover w-full h-full transform transition-all duration-700 ease-out group-hover:scale-105 opacity-90 group-hover:opacity-100"
                   loading="lazy"
                 />
-                {/* ইমেজের ওপর একটি হালকা ডার্ক ওভারলে যা হোভারে ক্লিয়ার হবে */}
                 <div className="absolute inset-0 bg-base-950/10 group-hover:bg-transparent transition-colors duration-500" />
               </div>
 
@@ -117,29 +114,35 @@ export default function Projects() {
 
                 {/* Control Navigation Links */}
                 <div className="flex gap-3 mt-auto pt-2">
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-sm btn-primary text-primary-content rounded-xl capitalize font-semibold px-5 shadow-sm hover:scale-105 transition-all duration-300"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                    Live Demo
-                  </a>
+                  {/* কন্ডিশনাল লাইভ ডেমো বাটন */}
+                  {project.liveLink && (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-sm btn-primary text-primary-content rounded-xl capitalize font-semibold px-5 shadow-sm hover:scale-105 transition-all duration-300"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      Live Demo
+                    </a>
+                  )}
 
-                  <a
-                    href={project.codeLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-sm btn-outline border-base-300 text-base-content/80 hover:bg-base-content hover:text-base-100 rounded-xl capitalize font-medium px-5 transition-all duration-300"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                    </svg>
-                    Code
-                  </a>
+                  {/* কন্ডিশনাল গিটহাব কোড বাটন */}
+                  {project.codeLink && (
+                    <a
+                      href={project.codeLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-sm btn-outline border-base-300 text-base-content/80 hover:bg-base-content hover:text-base-100 rounded-xl capitalize font-medium px-5 transition-all duration-300"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                      </svg>
+                      Code
+                    </a>
+                  )}
                 </div>
 
               </div>
