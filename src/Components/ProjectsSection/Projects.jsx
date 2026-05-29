@@ -7,8 +7,8 @@ const ProjectsJ = [
     title: "News Portal Website",
     description: "Developed a responsive news portal featuring category-based news filtering and dynamic content display. Integrated Firebase for secure user authentication and reliable hosting, ensuring a clean UI with trending and latest news sections across all screen sizes[cite: 24, 25, 26, 29, 30, 31].",
     stack: ["React.js", "Tailwind CSS", "Firebase", "JavaScript", "HTML", "CSS"],
-    liveLink: "#", // আপনার লাইভ ডেমো লিঙ্ক এখানে বসাবেন
-    codeLink: "https://github.com/MAshhabDev", // আপনার গিটহাব প্রজেক্ট লিঙ্ক [cite: 4]
+    liveLink: "https://dragon-news-fdc6a.web.app/", // আপনার লাইভ ডেমো লিঙ্ক এখানে বসাবেন
+    codeLink: "https://github.com/MAshhabDev/Dragon-News", // আপনার গিটহাব প্রজেক্ট লিঙ্ক [cite: 4]
     image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=600"
   },
   {
@@ -16,8 +16,8 @@ const ProjectsJ = [
     title: "Travel Booking Website",
     description: "Built a responsive travel booking web application with an interactive UI for exploring destinations. Implemented a scalable component-based architecture with dynamic content rendering, with ongoing development for an advanced navigation and booking system[cite: 32, 34, 35, 36, 37, 38].",
     stack: ["React.js", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
-    liveLink: "#", // আপনার লাইভ ডেমো লিঙ্ক এখানে বসাবেন
-    codeLink: "https://github.com/MAshhabDev", // আপনার গিটহাব প্রজেক্ট লিঙ্ক [cite: 4]
+    liveLink: "https://travel-guru-tour.firebaseapp.com", // আপনার লাইভ ডেমো লিঙ্ক এখানে বসাবেন
+    codeLink: "https://github.com/MAshhabDev/Travel-Guru", // আপনার গিটহাব প্রজেক্ট লিঙ্ক [cite: 4]
     image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=600"
   },
   {
@@ -129,7 +129,6 @@ export default function Projects() {
                     </a>
                   )}
 
-                  {/* কন্ডিশনাল গিটহাব কোড বাটন */}
                   {project.codeLink && (
                     <a
                       href={project.codeLink}

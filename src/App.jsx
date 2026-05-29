@@ -2,7 +2,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import HeroSection from "./Components/Hero/Hero";
 import SkillsScroll from "./Components/Skills/skills";
 import Projects from "./Components/ProjectsSection/Projects";
-import EducationTimeline from "./Components/Education/EducationTimelinse";
+import EducationTimeline from "./Components/Education/EducationTimeline";
 import ContactSection from "./Components/Contact/ContactInfo";
 import Footer from "./Components/Footer/Footer";
 

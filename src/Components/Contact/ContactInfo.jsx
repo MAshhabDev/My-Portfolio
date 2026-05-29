@@ -61,11 +61,9 @@ export default function ContactSection() {
             <div className="max-w-7xl mx-auto w-full relative z-10 px-4">
 
                 <div className="text-center mb-16">
-
                     <h2 className="text-4xl font-extrabold tracking-tight mt-4 text-white bg-gradient-to-r from-base-content to-base-content/70 bg-clip-text sm:text-5xl">
                         Let's <span className="text-primary">Build Together</span>
                         <div className="w-16 h-1 bg-gradient-to-r from-primary to-secondary mt-3 mx-auto rounded-full"></div>
-
                     </h2>
                 </div>
 
@@ -81,7 +79,8 @@ export default function ContactSection() {
                         {CONTACT_INFO.map((info) => (
                             <div
                                 key={info.id}
-                                className="flex items-center gap-5 p-4 rounded-xl bg-base-200 border border-base-300 hover:border-primary/40 hover:shadow-lg transition-all duration-300 group"
+                                // ফিক্সড: bg-base-200 কে bg-base-200/40 backdrop-blur-md করা হয়েছে
+                                className="flex items-center gap-5 p-4 rounded-xl bg-base-200/40 backdrop-blur-md border border-base-300 hover:border-primary/40 hover:shadow-lg transition-all duration-300 group"
                             >
                                 {/* Custom Glass-Icon Orb */}
                                 <div className="w-11 h-11 rounded-xl bg-base-300/50 border border-base-300 flex items-center justify-center shrink-0 text-base-content/80 group-hover:text-primary transition-colors duration-300">
@@ -103,8 +102,8 @@ export default function ContactSection() {
 
                     {/* Right Column: The Modern Glassmorphic Form Canvas */}
                     <div className="lg:col-span-7">
-                        {/* ফর্মের মেইন বক্স ব্যাকগ্রাউন্ড ও বর্ডার স্লেট থিমে লকড */}
-                        <div className="p-6 sm:p-10 rounded-2xl bg-base-200 border border-base-300 shadow-xl">
+                        {/* ফিক্সড: bg-base-200 কে bg-base-200/40 backdrop-blur-md করা হয়েছে */}
+                        <div className="p-6 sm:p-10 rounded-2xl bg-base-200/40 backdrop-blur-md border border-base-300 shadow-xl">
 
                             <form onSubmit={handleSubmit} className="space-y-5">
 
@@ -125,7 +124,7 @@ export default function ContactSection() {
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold tracking-widest text-base-content/50 uppercase">Email</label>
                                     <input
-                                        type="email"
+                                        type="type"
                                         placeholder="hello@email.com"
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
